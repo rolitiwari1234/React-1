@@ -1,28 +1,30 @@
-import React, { useState ,useMemo} from 'react'
+import React, { createRef} from 'react'
 import './App.css';
 
-function App(){
-  const [count,setCount]=useState(0)
-  const [item,setItem]= useState(10)
+class App extends React.Component{
+  constructor(){
+    super();
+    this.inputRef = createRef();
+  }
+  componentDidMount(){
+  //  console.warn(this.inputRef.current.value = "100")
+  }
+  getVal(){
+    console.warn(this.inputRef.current.value)
+    this.inputRef.current.style.color="red"
+    this.inputRef.current.style.backgroundColor="blue"
+  }
+   render(){
 
-  const  multiCountMemo = useMemo(function multiCount()
-  {
-   console.warn("multiCount")
-   return count*2
-  },[count])
-
+   
     return (
       <div className="App">
-        <h1>useMemo hook in react</h1>
-
-        <h2>count : {count}</h2>
-        <h2>item: {item}</h2>
-        <h2> {multiCountMemo} </h2>
-
-        <button  onClick=  {()=>setCount(count+1)} >update count</button>
-        <button onClick = {()=>setItem(item*10)} >update item</button>
+       <h1>ref in react</h1>
+       <input type = "text" ref = {this.inputRef}/>
+       <button onClick={()=>this.getVal()}>inputRef</button>
        </div>
     )
+   }
     };
 
 export default App;
