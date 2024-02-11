@@ -1,35 +1,24 @@
 import React from 'react'
 import './App.css';
-import User from './User'
+import Cols from './Cols';
+
+
 
 
 
 function App() {
-  const users = [
-    {
-      name :"roli",email:"roli@gmail.com",address:"222"
-    },
-    {
-      name :"yashi",email:"yashi@gmail.com",address:"444"
-    },
-    {
-      name :"shiv",email:"shiv@gmail.com",address:"666"
-    },
-    {
-      name :"radhe",email:"radhe@gmail.com",address:"888"
-    },
-    {
-      name:"seeta",email:"seeta@gmail.com",address:"111"
-    }
-  ]
+  
   return (
     <div className="App">
-      <h1>reuse component in loop</h1>
-   
-      {
-        users.map((item,i)=>
-      <User data = {item}/>)
-      }
+      <h1>React fragment</h1>
+   <table>
+    <tbody>
+      <tr>
+       <Cols/>
+      </tr>
+    </tbody>
+   </table>
+     
     </div>
   );
 }
