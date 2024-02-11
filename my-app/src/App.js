@@ -10,14 +10,17 @@ function App() {
       name :"roli",email:"roli@gmail.com",address:"222"
     },
     {
-      name :"yashi",email:"yashi@gmail.com",address:"222"
+      name :"yashi",email:"yashi@gmail.com",address:"444"
     },
     {
-      name :"shiv",email:"shiv@gmail.com",address:"222"
+      name :"shiv",email:"shiv@gmail.com",address:"666"
     },
     {
-      name :"radhe",email:"radhe@gmail.com",address:"222"
+      name :"radhe",email:"radhe@gmail.com",address:"888"
     },
+    {
+      name:"seeta",email:"seeta@gmail.com",address:"111"
+    }
   ]
   return (
     <div className="App">
