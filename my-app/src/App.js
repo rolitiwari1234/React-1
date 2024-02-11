@@ -1,25 +1,21 @@
 import React from 'react'
 import './App.css';
-import Cols from './Cols';
-
-
-
-
+import Send from './Send'
 
 function App() {
   
+  function parentAlert(data)
+  {
+    console.log(data)
+    alert(data.name)
+  }
   return (
     <div className="App">
-      <h1>React fragment</h1>
-   <table>
-    <tbody>
-      <tr>
-       <Cols/>
-      </tr>
-    </tbody>
-   </table>
      
-    </div>
+      <h1>Lifting State up</h1>
+      <Send alert = {parentAlert}/>
+
+     </div>
   );
 }
 
