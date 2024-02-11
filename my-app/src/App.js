@@ -1,22 +1,29 @@
-import React from 'react'
+import React,{PureComponent} from 'react'
 import './App.css';
-import Send from './Send'
+import Pure from './Pure';
 
-function App() {
-  
-  function parentAlert(data)
-  {
-    console.log(data)
-    alert(data.name)
+class App extends React.Component{
+  constructor(){
+    super();
+    this.state= {
+      count:1
+    }
   }
-  return (
-    <div className="App">
-     
-      <h1>Lifting State up</h1>
-      <Send alert = {parentAlert}/>
-
-     </div>
-  );
+  render(){
+    console.warn("check-rerending")
+    return (
+      <div className="App">
+        <Pure count = {this.state.count}/>
+      
+       <button onClick={()=>this.setState({count:this.state.count+1})}
+       >update count</button>
+      </div>
+    );
+  }
 }
+
+  
+
+
 
 export default App;
