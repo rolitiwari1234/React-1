@@ -16,7 +16,7 @@ function App(){
     }
     function HOCRed(props)
     {
-      return <h2 style ={{backgroundColor:'rosybrown',width:"200px"}}><props.cmp/></h2>
+      return <h2 style ={{backgroundColor:'rosybrown',width:"200px",justifyContent:"center"}}><props.cmp/></h2>
     }
     function HOCGreen(props)
     {
