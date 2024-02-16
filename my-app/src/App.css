@@ -18,7 +18,21 @@ span{
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.navbar{
+  text-align: right;
+}
+.navbar li{
+  display: inline-block;
+  padding: 10px 5px;
+  
+}
+.nav-bar-link{
+  color:rgb(16, 15, 15);
+  text-decoration:none;
+}
+.nav-bar-link:hover{
+  color:rgb(222, 34, 34);
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
