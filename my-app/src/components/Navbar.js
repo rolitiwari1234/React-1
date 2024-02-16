@@ -4,11 +4,10 @@ function Navbar(){
     return(
         <div>
             <ul>
-                {/* <li><Link to = "/">Home</Link></li>
-           <li><Link to = "/About">About</Link></li> */}
-           <li><a href = '/'>Home</a></li>
-           <li><a href ='/about'>About</a></li>
-           </ul>
+           <li><Link to = "/">Home</Link></li>
+           <li><Link to = "/about">About</Link></li> 
+            <li><Link to = "/">Contact</Link></li>  
+          </ul>
         </div>
     )
 }
