@@ -3,7 +3,7 @@ import './App.css';
 import Home from './components/Home';
 import About from './components/About'
 import Navbar from './components/Navbar';
-import Page404 from './componet/Page404'
+import User from './components/User';
 
 function App(){
     return (
@@ -14,8 +14,9 @@ function App(){
       <Routes>
          <Route path = "/" element = {<Home/>}/> 
          <Route path = "/about" elememt = {<About />}/>
-          {/* <Route path = "/*" element = {<Page404/>}/>   */}
-          <Route path = "/" element = {<Navigate to = "/"/>}/>  
+         <Route path = "/user " element = {<User/>}/>
+        <Route path = "/" element = {<Navigate to = "/"/>}/> 
+         
            </Routes>
       </BrowserRouter>
       </div>
