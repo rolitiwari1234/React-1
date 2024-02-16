@@ -26,6 +26,10 @@ span{
   padding: 10px 5px;
   
 }
+/* .navbar .active{
+  color:#4876d2;
+  background-color:rgb(37, 30, 236);
+} */
 .nav-bar-link{
   color:rgb(16, 15, 15);
   text-decoration:none;
