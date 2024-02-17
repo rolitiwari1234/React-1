@@ -9,6 +9,8 @@ import Contact from './components/Contact';
 import Company from './components/Company';
 import Channel from './components/Channel'
 import Other from './components/Other';
+import Login from './components/Login';
+import Protected from './components/Protected';
 
 function App(){
 
@@ -18,7 +20,7 @@ function App(){
    <Navbar/>
       
       <Routes>
-         <Route path = "/" element = {<Home/>}/> 
+         <Route path = "/" element = {<Protected Component = {Home}/>}/> 
          <Route path = "/about" elememt = {<About />}/>
          <Route path = "/user " element = {<User/>}/>
          <Route path = "/filter" element =  {<Filter/>}/>
@@ -27,6 +29,7 @@ function App(){
          <Route path = "company" element = {<Company/>}/>
          <Route path = "channel" element = {<Channel/>}/>
          <Route path = "/other" element = {<Other/>}/>
+         <Route path = "/login" element = {<Login/>}/>
            </Routes>
       </BrowserRouter>
       </div>
