@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route,Routes ,Link, BrowserRouter} from 'react-router-dom'
+import { BrowserRouter as router, Route,Routes ,Link, BrowserRouter} from 'react-router-dom'
 import './App.css';
 import React from 'react'
 
@@ -12,8 +12,8 @@ function App(){
     <Link to = "/home">home</Link><br />
     <Link to = "/about">about</Link>
     <Routes>
-      <Route path = "home" element = {<Home />} />
-      <Route path = "about" element = {<About />} />
+      <Route path = "/home" element = {<Home />} />
+      <Route path = "/about" element = {<About />} />
     </Routes>
     </BrowserRouter>
   </div>)
