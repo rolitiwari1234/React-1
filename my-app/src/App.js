@@ -1,38 +1,27 @@
-import { BrowserRouter as Router, Route,Routes ,Link, BrowserRouter } from 'react-router-dom'
+
+import { BrowserRouter as Router ,Link, Route,Routes} from 'react-router-dom';
 import './App.css';
 import React from 'react'
-import Page404 from './Page404'
+import Dynamic  from './Dynamic';
 
 function App(){
+  const dynamics = [
+    {id:"1",name:"roli", email:"roli@gmail.com",},
+    { id:"2",name:"yashi",email:"yashi@gmail.com",},
+    {id:"3",name:"yash",email:"yash@gmail.com"},]
+
   return(
   <div className='App'>
-   
-    <Link to = "/">home</Link><br />
-    <Link to = "/about">about</Link><br />
-    <Link to = "/login">page404</Link>
-  
-    <Routes>
-   
-    <Route path = "/" exact = {true} element = {<Home />} />
-      <Route path = "/about" element = {<About />} />
-     <Route path = "/*" element = {<Page404 />} />
     
-    </Routes>
-    
-  </div>)
-}
-function Home(){
-  return(
-    <div>
-      <h1>home page</h1>
+   <h1> React Dynamic Routing</h1>
+   {
+    dynamics.map((item)=>
+    <div><Link to = {"/dynamics/" + item.id}><h3>{item.name}</h3></Link></div>
+    )
+   }
+  <Routes>
+    <Route path = "/dynamics/:id" element = { <Dynamic />}> </Route>
+  </Routes>
     </div>
-  )
-}
-function About (){
-  return(
-    <div>
-      <h1>about page</h1>
-    </div>
-  )
-}
+    )}
 export default App;
