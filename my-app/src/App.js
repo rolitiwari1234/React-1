@@ -26,6 +26,7 @@ function App(){
             <td>userId</td>
             <td>Id</td>
             <td>title</td>
+            
           </tr>
           {
             data.map((item)=>
@@ -33,6 +34,7 @@ function App(){
               <td>{item.userId}</td>
               <td>{item.id}</td>
               <td>{item.title}</td>
+              
             </tr>)
           }
         </table> 
