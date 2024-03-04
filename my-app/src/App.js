@@ -1,35 +1,55 @@
-import './App.css';
-import React ,{useEffect, useState}from 'react'
+import './App.css'
+import React,{useEffect,useState} from 'react'
 
 function App(){
-  const [userId,setUserId] = useState("")
-  const [id,setId]= useState("");
-  const [title,setTitle]= useState("");
-  
-    function saveUser(){
-      console.warn({userId,id,title})
-      let data = {userId,id,title}
-        fetch("https://jsonplaceholder.typicode.com/todos/users",{
-          method:'POST',
-          headers:{
-            'Accept':'Application/json',
-            'Content-Type':'Applicatio/json'
-          },
-          body:JSON.stringify(data)
-          }).then((result)=>{
-            console.warn("result",result)
-            result.json().then((resp)=>{
-              console.log("resp",resp)
-            })
-          })
-      }
+  const [user,setUser] = useState([])
+  useEffect(()=>{
+    getList()
+  },[] )
+  console.warn(user)
+  function getList(){
+      fetch("https://jsonplaceholder.typicode.com/users").then((result)=>{
+        result.json().then((resp)=>{
+          // console.warn(resp)
+          setUser(resp)
+        })
+      })}
+    function deleteUser(id){
+      fetch(`https://jsonplaceholder.typicode.com/users/${id}`,{
+        method:`DELETE`})
+        .then((result)=>{
+        result.json().then((resp)=>{
+          console.warn(resp)
+          getList()
+        })
+      })
+  }
   return(
-  <div className='App'>
-   <h1> Post Api example</h1>
-   <input type = "text" value = {userId} name = "userId" onChange={(e)=>{setUserId(e.target.value.userId)}}/><br /><br />
-   <input type = "text"value={id} name = "id" onChange={(e)=>{setId(e.target.value.id)}}/><br /><br />
-   <input type = "text" value={title} name = "title" onChange={(e)=>{setTitle(e.target.value.title)}}/><br /><br />
-   <button type = "button" onClick={saveUser}>Save new user</button>
-     </div> 
-  )}
+    <div className="App">
+      <h2>Delete Data with Api Call</h2>
+      <table border = "1">
+        <tbody>
+        <tr>
+        <td>id</td>
+          <td>Name</td>
+          <td>username</td>
+          <td>email</td>
+          <td>optations</td>
+        </tr>
+        {
+          user.map((item,i)=>
+          <tr key = {i
+          }>
+            <td>{item.id}</td>
+            <td>{item.name}</td>
+            <td>{item.username}</td>
+            <td>{item.email}</td>
+            <button onClick={()=>deleteUser(item.id)}>delete</button>
+          </tr>)
+        }
+        </tbody>
+      </table>
+    </div>
+  )
+}
 export default App;
