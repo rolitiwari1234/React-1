@@ -11,8 +11,8 @@ function Preprops(props){
 
     return(
         <div>
-            <h1>PreviousProps value {PreviousProps}</h1>
-            <h1>current value {props.count} </h1>
+            <h1>Diff value { props.count-PreviousProps}</h1>
+            {/* <h1>current value {props.count} </h1> */}
         </div>
     )
 }
