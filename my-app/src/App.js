@@ -1,33 +1,16 @@
 import './App.css'
 import React, { useState } from'react'
+import Preprops from './Preprops';
 
 function App(){
+  const [count,setCount] = React.useState(0)
 
-  const[count,setCount]= useState(1)
-    function updateCounter(){
-
-  //   let rand = Math.floor(Math.random()*10)
-  //  setCount((pre)=>{
-  //   console.warn(pre)
-  //   if(pre < 5){
-  //     alert("low value")
-  //   }
-  //   return rand
-  // })
-
-    for (let i = 0;i <5;i++)
-    {
-     setCount((pre)=>
-     {
-      return pre+1
-     }
-     )
-    }
-  }
+  
   return(
     <div className='App'>
-      <h1>Previoue state {count }</h1>
-      <button onClick={updateCounter}>click me update counter</button>
+     
+     <Preprops count = {count} />
+     <button onClick = {()=>setCount(Math.floor(Math.random()*10)) }>update count</button>
     </div>
   )
 }
