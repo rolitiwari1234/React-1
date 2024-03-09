@@ -8,18 +8,19 @@
   height: 40vmin;
   pointer-events: none;
 }
-span{
+/* span{
   padding:10px;
   background-color: #282c34;
   font-size: 20px;
   color:rgb(177, 174, 179);
   line-height: 60px;
-}
+} */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .navbar{
   text-align: right;
 }
@@ -61,4 +62,48 @@ span{
   to {
     transform: rotate(360deg);
   }
+}
+.btn-wrapper button {
+  background-color: red;
+  border: 0px;
+  padding: 10px;
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: #333 0px 1px 5px;
+}
+.img-wrapper img {
+  width: 100px;
+  margin-top: -10px;;
+}
+.cart-wrapper{
+  height: 100px;
+    width: 500px;
+    border: 1px solid #ccc;
+    margin-left: 30%;
+}
+.item {
+  float: left;
+  display: inline-block;
+  width: 120px;
+  padding: 20px;
+  height: 70px;
+}
+.add-to-cart img{
+  width: 50px;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
+.cart-count{
+  
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    z-index: 1;
+    background-color: red;
+    padding: 7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
 }

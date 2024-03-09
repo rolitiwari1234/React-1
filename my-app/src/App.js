@@ -1,12 +1,12 @@
 import './App.css'
 import React from 'react'
-import UseRedux from './UserRedux';
+import Homecontainer from './containers/Homecontainer'
 
 function App(){
   return(
     <div className='App'>
-      {/* <h1>React Redux </h1> */}
-      <UseRedux  data = {{name:"Roli",age:"20"}} />
+      <Homecontainer />
+      
     </div>
   )
 }
