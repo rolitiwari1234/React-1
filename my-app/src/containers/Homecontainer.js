@@ -4,11 +4,11 @@ import HomeRedux from "../components/HomeRedux";
 
 
 const mapStateToProps = state => ({
-
+       cardData:state
 })
 
-const mapDispatchToProps = display => ({
-    addToCartHandler :data => display(addToCart(data))
+const mapDispatchToProps = dispatch => ({
+    addToCartHandler :data => dispatch(addToCart(data))
 })
 
 export default connect(mapStateToProps,mapDispatchToProps)(HomeRedux)
