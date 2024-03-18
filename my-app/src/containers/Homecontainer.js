@@ -4,7 +4,7 @@ import HomeRedux from "../components/HomeRedux";
 
 
 const mapStateToProps = state => ({
-       cardData:state
+    data:state.cardItems
 })
 
 const mapDispatchToProps = dispatch => ({
