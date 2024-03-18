@@ -2,7 +2,7 @@ import React from 'react'
 import iphone from '../images/iphone.png'
 
 function HomeRedux(props) {
-    // console.warn("homeredux",props.data)
+     console.warn("props",props)
     return (
         <div>
             
@@ -20,7 +20,11 @@ function HomeRedux(props) {
                     </span>
                 </div>
                 <div className="btn-wrapper item">
-                    <button onClick = {()=>props.addToCartHandler({price:10000,name:'iphone-13'})}>Add To Cart</button>
+                    <button onClick = {()=>props.addToCartHandler({price:10000,name:'iphone-13'})}>
+                        Add To Cart</button>
+
+                        <button className = "remove-cart-btn" onClick = {()=>props.addToCartHandler()}>                   
+                         Remove To Cart</button>
                 </div>
             </div>
         </div>
